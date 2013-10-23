@@ -26,7 +26,7 @@ class Psqlodbc < Formula
     
     system "./configure", *args
 
-    system "make"
+    system 'CFLAGS="-arch i386 -arch x86_64" make'
     system "make", "install"
   end
 end
